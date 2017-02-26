@@ -4,3 +4,31 @@ Extras:
 Add on to the previous program by asking the user for another number and printing out that many copies of the previous message. 
 (Hint: order of operations exists in Python)
 Print out that many copies of the previous message on separate lines. (Hint: the string "\n is the same as pressing the ENTER button)
+
+
+SOLUTION:
+
+name =raw_input("enter your name")
+age = raw_input("enter your age")
+a = raw_input("Enter the number of times you want to repeat your output ")
+b = 100
+c = int(age) + b
+for i in range(1,int(a)):
+  print name, ("your age after 100 years will be ="), c 
+  
+
+OUTPUT:
+
+
+enter your name pratyush
+enter your age 26
+Enter the number of times you want to repeat your output  10
+pratyush your age after 100 years will be = 126
+pratyush your age after 100 years will be = 126
+pratyush your age after 100 years will be = 126
+pratyush your age after 100 years will be = 126
+pratyush your age after 100 years will be = 126
+pratyush your age after 100 years will be = 126
+pratyush your age after 100 years will be = 126
+pratyush your age after 100 years will be = 126
+pratyush your age after 100 years will be = 126
