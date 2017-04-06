@@ -1,0 +1,9 @@
+num = int(raw_input("enter the number you want to check for even and odd"))
+check = int(raw_input("enter the number to divide"))
+even =num%2
+if even==0:
+  print num ,("is even")
+  if (num%4==0):
+   print num,( "is divisible by 4")
+else:
+  print num, ( "is odd")
