@@ -1,0 +1,16 @@
+PROBLEM:
+
+Ask the user for a string and print out whether this string is a palindrome or not. 
+(A palindrome is a string that reads the same forwards and backwards.)
+
+SOLUTION:
+
+a = str(raw_input("enter the string to check for Palindrome"))
+b = a[:]
+b = reversed(b)
+
+if list(a) == list(b):
+  print "the string is: Palindrome"      
+  
+else:
+  print "The string is not Palindrome"
