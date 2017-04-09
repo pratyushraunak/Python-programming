@@ -1,0 +1,27 @@
+ user1 = raw_input("Player 1:enter your choice")
+  user2 = raw_input("Player 2:enter your choice")
+  
+  if user1 == 'Rock' && user == 'Scissors':
+    print "Player 1: Wins"
+  break
+
+  if user1 == '' && user2 == '':
+    print "Player 1: Wins"
+  break
+
+  if user1 == 'Scissors' && user2 == 'Paper':
+    print "Player 1: Wins"
+  break
+
+  if user1 == 'Paper' && user2 == 'Rock':
+    print "Player 1: Wins"
+  break
+
+  if user1 == 'Rock' && user2 == 'Scissors':
+    print "Player 1: Wins"
+  break
+
+  if user1 == 'Rock' && user2 == 'Scissors':
+    print "Player 1: Wins"
+  break
+  
