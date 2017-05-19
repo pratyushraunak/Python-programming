@@ -1,27 +1,54 @@
- user1 = raw_input("Player 1:enter your choice")
-  user2 = raw_input("Player 2:enter your choice")
+while (True):
+  print "****THIS IS A ROCK, SCISSORS, PAPER GAME****"
+  user1 = raw_input("Player 1:enter your choice").lower()
+  user2 = raw_input("Player 2:enter your choice").lower()
   
-  if user1 == 'Rock' && user == 'Scissors':
+  if user1 == 'rock' and user2 == 'scissors':
     print "Player 1: Wins"
-  break
-
-  if user1 == '' && user2 == '':
+    print "Do you want to play another game: Y/N"
+    answer = raw_input().lower()
+    if answer == "n":
+      print "Thanks for playing"
+      break
+  elif user1 == 'scissors' and user2 == 'paper':
     print "Player 1: Wins"
-  break
-
-  if user1 == 'Scissors' && user2 == 'Paper':
+    print "Do you want to play another game: Y/N"
+    answer = raw_input().lower()
+    if answer == "n":
+      print "Thanks for playing"
+      break
+  elif user1 == 'paper' and user2 == 'rock':
     print "Player 1: Wins"
-  break
-
-  if user1 == 'Paper' && user2 == 'Rock':
-    print "Player 1: Wins"
-  break
-
-  if user1 == 'Rock' && user2 == 'Scissors':
-    print "Player 1: Wins"
-  break
-
-  if user1 == 'Rock' && user2 == 'Scissors':
-    print "Player 1: Wins"
-  break
-  
+    print "Do you want to play another game: Y/N"
+    answer = raw_input().lower()
+    if answer == "n":
+      print "Thanks for playing"
+      break
+  elif user1 == 'scissors' and user2 == 'rock':
+    print "Player 2: Wins"
+    print "Do you want to play another game: Y/N"
+    answer = raw_input().lower()
+    if answer == "n":
+      print "Thanks for playing"
+      break
+  elif user1 == 'paper' and user2 == 'scissors':
+    print "Player 2: Wins"
+    print "Do you want to play another game: Y/N"
+    answer = raw_input().lower()
+    if answer == "n":
+      print "Thanks for playing"
+      break
+  elif user1 == 'rock' and user2 == 'paper':
+    print "Player 2: Wins"
+    print "Do you want to play another game: Y/N"
+    answer = raw_input().lower()
+    if answer == "n":
+      print "Thanks for playing"
+      break
+  else:
+    print "Its a tie"
+    print "Do you want to play another game: Y/N"
+    answer = raw_input().lower()
+    if answer == "n":
+      print "Thanks for playing"
+      break
