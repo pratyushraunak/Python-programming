@@ -1,0 +1,23 @@
+Problem:
+
+Write a program that takes a list of numbers (for example, a = [5, 10, 15, 20, 25])
+and makes a new list of only the first and last elements of the given list. 
+For practice, write this code inside a function.
+
+Solution:
+
+import random
+
+a = 0
+b = 0
+def list_func(a,b):
+  for x in list1:
+    a = x
+    b = list1[-1]
+    break
+  return(a,b);  
+  
+list1 = random.sample(range(10), 5)
+print list1
+list2 = [list_func(a,b)]
+print list2
