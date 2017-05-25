@@ -1,1 +1,37 @@
+Problem:
+
+Write a program (function!) that takes a list and returns a new list that contains all the elements of the first list minus all 
+the duplicates.
+
+Extras:
+
+Write two different functions to do this - one using a loop and constructing a list, and another using sets.
+Go back and do Exercise 5 using sets, and write the solution for that in a different function.
+
+Solution:
+
+def user_dup1(x):
+  #print x
+  list2 = []
+  for a in x:
+    if a not in list2:
+      list2.append(a)
+      
+      
+  return list2
+  
+def user_dup2(y):
+  list2 = list(set(y))
+  return list2
+  
+list1 = []
+print "enter the size of the list"
+num = int(raw_input())
+for a in range(num):
+  list1.append(int(raw_input("enter the elements")))
+print "the input list is :" , list1
+
+print "the no-duplicate list is :" , user_dup1(list1) 
+print "the no-duplicate list using set() is : " , user_dup2(list1)
+
 
