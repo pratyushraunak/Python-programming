@@ -6,16 +6,49 @@ For every digit that the user guessed correctly in the correct place, they have 
 For every digit the user guessed correctly in the wrong place is a “bull.”
 Every time the user makes a guess, tell them how many “cows” and “bulls” they have. 
 Once the user guesses the correct number, the game is over. 
-Keep track of the number of guesses the user makes throughout teh game and tell the user at the end.
+Keep track of the number of guesses the user makes throughout the game and tell the user at the end.
 
 Solution:
 
 import random
 
-num = random.randint(1000,9999)
-list1 = [int(i) for i in str(num)]
-print list1
+def usr_inp(attempt,guessed):
+  guessed += 1
+  for i in range(4):
+    #user_val = raw_input("enter the number")
+    attempt.append(int(raw_input("enter a number")))
+  return attempt
+  return guessed  
+  
+def cow_bull(count1,count2,list1,attempt):
+  for i in list1:
+    for j in attempt:
+      if j == i:
+        if list1.index(i) == attempt.index(j):
+        #print list1.index(i)
+          count1 += 1
+        else:
+          count2 += 1
+  return count1
+  return count2
+  
+if __name__ == '__main__':
+  num = random.randint(1000,1100)
+  list1 = [int(i) for i in str(num)]
+  print "hi"
+  count1 = 0
+  count2 = 0
+  guessed = 0
+  attempt = []
+  while(1):
+    usr_inp(attempt,guessed)
+    print attempt
+    cow_bull(count1,count2,list1,attempt)
+    print "you have", +count1 ,"cows" 
+    print "you have", +count2 ,"bulls"
+    if count1 == 4:
+      print "you have guessed the correct number"
+      print "you had", +guessed ,"number of guesses"
+      break
+ 
 
-for i in range(4):
-  guess = int(raw_input("enter your guess"))
-  for j in 
