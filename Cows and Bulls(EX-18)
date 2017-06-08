@@ -35,14 +35,14 @@ def cow_bull(count1,count2,list1,attempt):
 if __name__ == '__main__':
   num = random.randint(1000,1100)
   list1 = [int(i) for i in str(num)]
-  print "hi"
+  #print "hi"
   count1 = 0
   count2 = 0
   guessed = 0
   attempt = []
   while(1):
     usr_inp(attempt,guessed)
-    print attempt
+    #print attempt
     cow_bull(count1,count2,list1,attempt)
     print "you have", +count1 ,"cows" 
     print "you have", +count2 ,"bulls"
