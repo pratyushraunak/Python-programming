@@ -11,44 +11,59 @@ Keep track of the number of guesses the user makes throughout the game and tell 
 Solution:
 
 import random
+count1 = 0
+count2 = 0
+guessed = 0
 
 def usr_inp(attempt,guessed):
+  #global guessed    
   guessed += 1
+  #print m
   for i in range(4):
     #user_val = raw_input("enter the number")
     attempt.append(int(raw_input("enter a number")))
-  return attempt
-  return guessed  
+    #print l
+  return attempt , guessed  
   
 def cow_bull(count1,count2,list1,attempt):
-  for i in list1:
-    for j in attempt:
-      if j == i:
-        if list1.index(i) == attempt.index(j):
-        #print list1.index(i)
-          count1 += 1
-        else:
-          count2 += 1
-  return count1
-  return count2
+    #global count1
+    #global count2
+    #print a
+    #print b
+    #print c
+    #print d
+    for i in list1:
+        #print i
+        for j in attempt:
+            #print j
+            if j == i:
+                if list1.index(i) == attempt.index(j):
+                    #print list1.index(i)
+                    count1 += 1
+                    #print a
+                else:
+                    count2 += 1
+    print count1
+    print count2
+    return count1 , count2 , list1 , attempt
   
 if __name__ == '__main__':
-  num = random.randint(1000,1100)
-  list1 = [int(i) for i in str(num)]
-  #print "hi"
-  count1 = 0
-  count2 = 0
-  guessed = 0
-  attempt = []
+      
   while(1):
-    usr_inp(attempt,guessed)
-    #print attempt
-    cow_bull(count1,count2,list1,attempt)
-    print "you have", +count1 ,"cows" 
-    print "you have", +count2 ,"bulls"
-    if count1 == 4:
-      print "you have guessed the correct number"
-      print "you had", +guessed ,"number of guesses"
-      break
+      
+      attempt = []
+      num = random.randint(1000,1100)
+      list1 = [int(i) for i in str(num)]
+      print list1
+      usr_inp(attempt,guessed)
+      #print attempt
+      cow_bull(count1,count2,list1,attempt)
+      print "you have", +count1 ,"cows"
+      #print count1
+      print "you have", +count2 ,"bulls"
+      if count1 == 4:
+          print "you have guessed the correct number"
+          print "you had", +guessed ,"number of guesses"
+          break
  
 
