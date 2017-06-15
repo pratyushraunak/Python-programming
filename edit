@@ -1,0 +1,13 @@
+list1 = []
+num = int(raw_input("enter the size of the list"))
+
+for i in range(num):
+  elem = int(raw_input("enter the a number in ordered sequence"))
+  list1.append(elem)
+#print list1
+#num1 = int(raw_input("enter the number to be searched in the list"))
+
+#bin_search = num/2
+s = int(len(list1) / 2)
+print list1.index(s)
+#if num1 < num/2:
