@@ -1,13 +1,45 @@
+Problem:
+Write a function that takes an ordered list of numbers (a list where the elements are in order from smallest to largest) and another number.
+The function decides whether or not the given number is inside the list and returns (then prints) an appropriate boolean.
+
+Extras:
+
+Use binary search in a different function.
+
+Solution:
+
+def search(list , item):
+  if len(list) == 0:
+    return False
+  else:
+    for i in list:
+      if item in list:
+        return True
+      else:
+        return False
+
+#Extras:
+def bin_search(list , item):
+  if len(list) == 0:
+    return False
+  else:  
+    mid = len(list)//2
+    if item == list[mid]:
+      return True
+      
+    elif item < list[mid]:
+      return bin_search(list[:mid] , item)
+      
+    elif item > list[mid]:
+      return bin_search(list[mid + 1:] , item)
+      
+
 list1 = []
 num = int(raw_input("enter the size of the list"))
-
 for i in range(num):
   elem = int(raw_input("enter the a number in ordered sequence"))
   list1.append(elem)
-#print list1
-#num1 = int(raw_input("enter the number to be searched in the list"))
+item = int(raw_input("enter the number to be searched in the list"))
+print search(list1 , item)
+print bin_search(list1 , item)
 
-#bin_search = num/2
-s = int(len(list1) / 2)
-print list1.index(s)
-#if num1 < num/2:
